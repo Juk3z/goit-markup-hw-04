@@ -13,8 +13,10 @@
   --accent-color: #2196f3;
   --main-background-color: #ffffff;
   --secondary-background-color: #f5f4fa;
-  --banner-text-color: #ffffff;
+  --alt-text-color: #ffffff;
   --banner-background-color: #2f303a;
+  --logo-main-color: #afb1b8;
+  --safe-background-color: #c4c4c4;
 }
 
 img {
@@ -171,17 +173,17 @@ section:nth-child(2n + 4) {
   color: var(--accent-color);
 }
 
-.icon {
-  display: inline;
+.mail {
   height: 12px;
   width: 16px;
   margin-right: 10px;
   fill: var(--secondary-text-color);
 }
 
-.icon.smartphone {
+.smartphone {
   width: 10px;
   height: 16px;
+  margin-right: 10px;
 }
 
 .contacts:hover .icon,
@@ -206,7 +208,7 @@ section:nth-child(2n + 4) {
   padding-top: 200px;
   padding-bottom: 200px;
 
-  background-color: #c4c4c4;
+  background-color: var(--safe-background-color);
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
@@ -219,7 +221,7 @@ section:nth-child(2n + 4) {
 
 .banner-title {
   margin-bottom: 30px;
-  color: var(--banner-text-color);
+  color: var(--alt-text-color);
   margin-left: auto;
   margin-right: auto;
 
@@ -239,7 +241,7 @@ section:nth-child(2n + 4) {
   border-radius: 4px;
   padding: 10px 32px;
 
-  color: var(--banner-text-color);
+  color: var(--alt-text-color);
   background-color: var(--accent-color);
   font-weight: 700;
   font-size: 16px;
@@ -434,24 +436,34 @@ section:nth-child(2n + 4) {
   margin-bottom: 16px;
 }
 
-.socials .list {
+.socials {
   display: flex;
   justify-content: space-between;
 }
 
 .socials-link {
-  fill: #afb1b8;
-  display: block;
-  width: 44px;
-  height: 44px;
-  padding: 12px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  /* width: 44px;
+  height: 44px; */
   border-radius: 50%;
+}
+
+.socials-item {
+  height: 44px;
+  width: 44px;
 }
 
 .socials-link:hover,
 .socials-link:focus {
-  fill: var(--banner-text-color);
   background-color: var(--accent-color);
+}
+
+.socials-link:hover .icon {
+  fill: var(--alt-text-color);
 }
 
 .instagram {
@@ -504,30 +516,42 @@ section:nth-child(2n + 4) {
 
 .clients-list {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 .clients .item {
   display: flex;
+  width: 170px;
+  height: 90px;
+}
+
+.clients .item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .clients-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #afb1b8;
-  fill: #afb1b8;
+  border: 1px solid var(--logo-main-color);
   border-radius: 4px;
 
-  width: 170px;
-  height: 90px;
+  width: 100%;
+  height: 100%;
 }
 
 .clients-link:hover,
 .clients-link:focus {
-  color: var(--accent-color);
-  fill: var(--accent-color);
   border-color: var(--accent-color);
+}
+
+.clients-link:hover .icon,
+.clients-link:focus .icon {
+  fill: var(--accent-color);
+}
+
+.icon {
+  fill: var(--logo-main-color);
 }
 
 .logo-1 {
@@ -563,6 +587,7 @@ section:nth-child(2n + 4) {
 /* Оформления футера и адреса */
 .footer > .container {
   display: flex;
+  align-items: baseline;
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -578,7 +603,7 @@ section:nth-child(2n + 4) {
 }
 
 .studio-footer {
-  color: #ffffff;
+  color: var(--alt-text-color);
   font-family: 'Raleway', sans-serif;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
@@ -594,7 +619,7 @@ section:nth-child(2n + 4) {
 }
 
 .address {
-  color: #ffffff;
+  color: var(--alt-text-color);
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
@@ -625,7 +650,7 @@ section:nth-child(2n + 4) {
   height: 80px;
 }
 .join-tittle {
-  color: var(--banner-text-color);
+  color: var(--alt-text-color);
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
@@ -633,7 +658,7 @@ section:nth-child(2n + 4) {
 }
 
 .footer .socials-link {
-  fill: var(--banner-text-color);
+  fill: var(--alt-text-color);
   background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -699,7 +724,7 @@ section:nth-child(2n + 4) {
 .portfolio-pages:hover,
 .portfolio-pages:focus {
   background-color: var(--accent-color);
-  color: #ffffff;
+  color: var(--alt-text-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
