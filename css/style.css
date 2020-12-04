@@ -657,6 +657,7 @@ section:nth-child(2n + 4) {
 }
 
 .portfolio a {
+  display: block;
   text-decoration: none;
   color: var(--secondary-text-color);
 }
@@ -714,7 +715,8 @@ section:nth-child(2n + 4) {
   flex-basis: calc((100% - 60px) / 3);
 }
 
-.cards .item:hover {
+.cards .item a:hover,
+.cards .item a:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
