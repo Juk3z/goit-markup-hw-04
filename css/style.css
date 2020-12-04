@@ -87,24 +87,30 @@ section:nth-child(2n + 4) {
 }
 /* оформление блока навигации */
 .header {
-  padding-top: 24px;
-  padding-bottom: 25px;
+  /* padding-top: 24px;
+  padding-bottom: 25px; */
   border-bottom: 1px solid #ececec;
-  max-height: 80px;
+  /* max-height: 80px; */
 }
 
 .header > .container {
   display: flex;
   justify-content: flex-start;
-  align-items: baseline;
+  align-items: center;
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding: 0 15px;
 }
+.nav {
+  display: flex;
+  align-items: center;
+}
 
 .logo {
   display: inline-block;
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
 
 .navmenu,
@@ -113,13 +119,16 @@ section:nth-child(2n + 4) {
 }
 
 .header-address .item {
-  display: inline-block;
+  display: flex;
+  align-items: center;
 }
 .header-address > .item:not(:first-child) {
   margin-left: 50px;
 }
 
 .header-address {
+  display: flex;
+  align-items: center;
   margin-left: auto;
 }
 
@@ -133,7 +142,7 @@ section:nth-child(2n + 4) {
 
 .nav-link {
   display: inline-block;
-  padding: 10px 0;
+  padding: 32px 0;
   color: var(--main-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -147,8 +156,9 @@ section:nth-child(2n + 4) {
 }
 
 .contacts {
-  display: inline-block;
-  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  padding: 32px 0;
   color: var(--secondary-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -161,16 +171,49 @@ section:nth-child(2n + 4) {
   color: var(--accent-color);
 }
 
+.icon {
+  display: inline;
+  height: 12px;
+  width: 16px;
+  margin-right: 10px;
+  fill: var(--secondary-text-color);
+}
+
+.icon.smartphone {
+  width: 10px;
+  height: 16px;
+}
+
+.contacts:hover .icon {
+  fill: var(--accent-color);
+}
+
 /* оформление секции баннера */
 
 .banner {
-  background-color: var(--banner-background-color);
+  /* background-color: var(--banner-background-color); */
+  background-color: var(--main-background-color);
 }
 
 .banner > .container {
   text-align: center;
+
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 200px;
   padding-bottom: 200px;
+
+  background-color: #c4c4c4;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url('../images/bgc.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .banner-title {
@@ -226,6 +269,54 @@ section:nth-child(2n + 4) {
 
 .principles .item {
   width: calc((100% - 90px) / 4);
+}
+
+.sputnik::before {
+  content: '';
+  display: block;
+  margin-bottom: 30px;
+  height: 120px;
+  background-color: var(--secondary-background-color);
+  border-radius: 4px;
+  background-image: url('../images/antenna.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.clock::before {
+  content: '';
+  display: block;
+  margin-bottom: 30px;
+  height: 120px;
+  background-color: var(--secondary-background-color);
+  border-radius: 4px;
+  background-image: url('../images/clock.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.diagram::before {
+  content: '';
+  display: block;
+  margin-bottom: 30px;
+  height: 120px;
+  background-color: var(--secondary-background-color);
+  border-radius: 4px;
+  background-image: url('../images/diagram.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.austronaut::before {
+  content: '';
+  display: block;
+  margin-bottom: 30px;
+  height: 120px;
+  background-color: var(--secondary-background-color);
+  border-radius: 4px;
+  background-image: url('../images/astronaut.svg');
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .principles .item:not(:first-child) {
@@ -339,10 +430,136 @@ section:nth-child(2n + 4) {
 
 .team-profession {
   color: var(--secondary-text-color);
+  margin-bottom: 16px;
+}
+
+.socials .list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.socials-link {
+  fill: #afb1b8;
+  display: block;
+  width: 44px;
+  height: 44px;
+  padding: 12px 12px;
+  border-radius: 50%;
+}
+
+.socials-link:hover {
+  fill: var(--banner-text-color);
+  background-color: var(--accent-color);
+}
+
+.instagram {
+  width: 20px;
+  height: 20px;
+}
+
+.twitter {
+  width: 20px;
+  height: 20px;
+}
+
+.facebook {
+  width: 20px;
+  height: 20px;
+}
+
+.linkedin {
+  width: 20px;
+  height: 20px;
+}
+
+/* оформление секции клиентов*/
+
+.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.clients > .container {
+  width: 1200px;
+  padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.clients-tittle::first-letter {
+  text-transform: uppercase;
+}
+
+.clients-tittle {
+  text-align: center;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.clients-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.clients .item {
+  display: flex;
+}
+
+.clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #afb1b8;
+  fill: #afb1b8;
+  border-radius: 4px;
+
+  width: 170px;
+  height: 90px;
+}
+
+.clients-link:hover {
+  color: var(--accent-color);
+  fill: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.logo-1 {
+  width: 44.27px;
+  height: 49.23px;
+}
+
+.logo-2 {
+  width: 40px;
+  height: 52px;
+}
+
+.logo-3 {
+  width: 41px;
+  height: 42.6px;
+}
+
+.logo-4 {
+  width: 79.66px;
+  height: 42.02px;
+}
+
+.logo-5 {
+  width: 59px;
+  height: 47px;
+}
+
+.logo-6 {
+  width: 88.48px;
+  height: 45.44px;
 }
 
 /* Оформления футера и адреса */
 .footer > .container {
+  display: flex;
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -397,6 +614,28 @@ section:nth-child(2n + 4) {
   display: block;
   margin-bottom: 20px;
   text-decoration: none;
+}
+
+.join {
+  margin-left: 70px;
+  width: 206px;
+  height: 80px;
+}
+.join-tittle {
+  color: var(--banner-text-color);
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.footer .socials-link {
+  fill: var(--banner-text-color);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer .socials-link:hover {
+  background-color: var(--accent-color);
 }
 
 /* оформление ссылки, текущей страницы в секции навигации */
