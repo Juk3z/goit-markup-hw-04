@@ -184,7 +184,8 @@ section:nth-child(2n + 4) {
   height: 16px;
 }
 
-.contacts:hover .icon {
+.contacts:hover .icon,
+.contacts:focus .icon {
   fill: var(--accent-color);
 }
 
@@ -447,7 +448,8 @@ section:nth-child(2n + 4) {
   border-radius: 50%;
 }
 
-.socials-link:hover {
+.socials-link:hover,
+.socials-link:focus {
   fill: var(--banner-text-color);
   background-color: var(--accent-color);
 }
@@ -521,7 +523,8 @@ section:nth-child(2n + 4) {
   height: 90px;
 }
 
-.clients-link:hover {
+.clients-link:hover,
+.clients-link:focus {
   color: var(--accent-color);
   fill: var(--accent-color);
   border-color: var(--accent-color);
@@ -634,7 +637,8 @@ section:nth-child(2n + 4) {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.footer .socials-link:hover {
+.footer .socials-link:hover,
+.footer .socials-link:focus {
   background-color: var(--accent-color);
 }
 
