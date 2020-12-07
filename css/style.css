@@ -464,10 +464,7 @@ a {
 .socials-link:hover,
 .socials-link:focus {
   background-color: var(--accent-color);
-}
-
-.socials-link:hover .icon {
-  fill: var(--alt-text-color);
+  color: var(--alt-text-color);
 }
 
 .instagram {
@@ -663,6 +660,7 @@ a {
 .footer .socials-link:hover,
 .footer .socials-link:focus {
   background-color: var(--accent-color);
+  color: var(--alt-text-color);
 }
 
 /* оформление ссылки, текущей страницы в секции навигации */
